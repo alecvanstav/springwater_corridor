@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter|Palanquin+Dark');
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* better box model */
+* { 
+-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+
+/* General Styles
+
+font-family: 'Bitter', serif;
+font-family: 'Palanquin Dark', sans-serif;
+
+overflow-y: hidden; IN BODY
+*/
+
+body {
+    width: 2600px;
+    height: 650px;
+    background-image: url(../img/SpringWater_Drawing2.jpg);
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat; 
+    background-color: #ffc000;
+	animation: come 8s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes come {
+ 0%, 5% {
+      opacity: 0;
+  
+  }
+
+  40% {
+      
+      opacity: 1;
+  }
+
+}
+
+.white {
+    position: absolute;
+   width: 2600px;
+    height: 100vh;
+    background-color: white;
+    	animation: go 4s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes go {
+ 0%, 30% {
+      opacity: 1;
+  
+  }
+
+  100% {
+      
+      opacity: 0;
+  }
+
+}
+
+}
+
+h1 {
+    font-family: 'Palanquin Dark', sans-serif;
+    font-style: italic;
+    position: relative;
+    width: 20%;
+    top: -7px;
+    right: -90px;
+}
+h2 {
+    margin-bottom: 16px;
+    line-height: 18px;
+    font-family: 'Palanquin Dark', sans-serif;
+    font-size: 17px;
+    top: -30px;
+    right: 1.8%;
+    color: white;
+}
+
+h3 {
+    font-family: 'Palanquin Dark', sans-serif;
+    font-size: 40px;
+    margin-top: 2px;
+    margin-left: 16px;
+}
+
+h4 {
+    margin-bottom: 16px;
+    line-height: 18px;
+    font-family: 'Palanquin Dark', sans-serif;
+    font-size: 17px;
+}
+
+p {
+	font-family: 'Cabin', serif;
+    color: black;
+    font-size: 16px;
+    line-height: 18px
+    
+}
+
+
+
+nav {
+    font-family: 'Palanquin Dark', sans-serif;
+    margin-left: 440px;
+    margin-top: 32px;
+    max-height: 100px;
+    position: fixed;
+    background: none;
+    z-index: 1;
+}
+
+nav a {
+	font-size: 13px;
+	color: black;
+	display: inline-block;
+	text-decoration: none;
+	margin: 5px 10px;
+	cursor: pointer;
+	transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+nav a:hover {
+	font-size: 15px;
+	color: #fff;
+}
+
+.circle {
+    width: 70px;
+	height: 70px;
+	background: none;
+    border: 8px solid white;
+	border-radius: 50px;
+    margin-top: -50px;
+}
+
+
+
+/* Page-Specific Styles BACK */
+
+
+.logo {
+    flex: 1;
+    position: fixed;
+    margin-left: 15px;
+    margin-top: 7px;
+    padding: 10px;
+    width: 356.57px;
+    height: 86.17px;
+    z-index: 1;
+    background-image: url(../img/logo-20.svg);
+    background-size: 356.57px 86.17px;
+}
+
+.logo:hover{
+    border-style: double;
+    border-width: 2px;
+    border-color: black;
+}
+
+.page {
+    flex: 1;
+   width: 100vw;
+   min-width: 1100px;
+    height: 100vh;
+}
+
+.page2back {
+   display: block;
+   flex: 1;
+   background-color: #F7941D;
+   width: 100vw;
+   min-width: 1100px;
+   height: 100vh;
+}
+
+/* >>>>>> IMAGES <<<<< */
+
+.homeless {
+    position: absolute;
+    top: 340px;
+    left: 310px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(184, 11, 157, 0.26);
+    border-radius: 50px;
+}
+
+.homeless:hover {
+    border: none;
+	background: none;
+    left: 62px;
+    top: -12px;
+    width: 415px;
+    height: 469px;
+    background-image: url(../img/SB_Homeless.png);
+    position: absolute;
+    animation: shake 2s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+ 0%, 5% {
+    transform: translate3d(-2px, 2px, 0);
+      opacity: 0;
+  
+  }
+
+  40% {
+    transform: translate3d(2px, -2px, 0);
+      
+      opacity: 1;
+  }
+
+}
+
+.oaks {
+    position: absolute;
+    top: 440px;
+    left: 2050px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(184, 11, 157, 0.26);
+    border-radius: 50px;
+    z-index: 1;
+}
+
+.oaks:hover {
+    border: none;
+	background: none;
+    top: 10px;
+    left: 1900px;
+    width: 415px;
+    height: 480px;
+    background-image: url(../img/SB_Oaks.png);
+    position: absolute;
+    animation: shake 2s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+    z-index: 1;
+}
+
+@keyframes shake {
+ 0%, 5% {
+    transform: translate3d(-2px, 2px, 0);
+      opacity: 0;
+  
+  }
+
+  40% {
+    transform: translate3d(2px, -2px, 0);
+      
+      opacity: 1;
+  }
+
+}
+
+.bike {
+    position: absolute;
+    top: 380px;
+    left: 1800px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(184, 11, 157, 0.26);
+    border-radius: 50px;
+}
+
+.bike:hover {
+    border: none;
+	background: none;
+    top: -10px;
+    left: 1500px;
+    width: 415px;
+    height: 480px;
+    background-image: url(../img/SB_Bike.png);
+    position: absolute;
+    animation: shake 2s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+    z-index: 1;
+}
+
+@keyframes shake {
+ 0%, 5% {
+    transform: translate3d(-2px, 2px, 0);
+      opacity: 0;
+  
+  }
+
+  40% {
+    transform: translate3d(2px, -2px, 0);
+      
+      opacity: 1;
+  }
+
+}
+
+
+.run {
+    position: absolute;
+    top: 475px;
+    left: 2350px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(184, 11, 157, 0.26);
+    border-radius: 50px;
+}
+
+.run:hover {
+    border: none;
+	background: none;
+    top: 45px;
+    left: 2170px;
+    width: 415px;
+    height: 480px;
+    background-image: url(../img/SB_Run.png);
+    position: absolute;
+    animation: shake 2s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+ 0%, 5% {
+    transform: translate3d(-2px, 2px, 0);
+      opacity: 0;
+  
+  }
+
+  40% {
+    transform: translate3d(2px, -2px, 0);
+      
+      opacity: 1;
+  }
+
+}
+
+.trail {
+    position: absolute;
+    top: 210px;
+    left: 830px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(184, 11, 157, 0.26);
+    border-radius: 50px;
+}
+
+.trail:hover {
+    border: none;
+	background: none;
+    top: 50px;
+    left: 850px;
+    width: 415px;
+    height: 480px;
+    background-image: url(../img/SB_Trail.png);
+    position: absolute;
+    animation: shake 2s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+ 0%, 5% {
+    transform: translate3d(-2px, 2px, 0);
+      opacity: 0;
+  
+  }
+
+  40% {
+    transform: translate3d(2px, -2px, 0);
+      
+      opacity: 1;
+  }
+
+}
+
+.deer {
+    position: absolute;
+    top: 145px;
+    left: 1100px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(184, 11, 157, 0.26);
+    border-radius: 50px;
+}
+
+.deer:hover {
+    border: none;
+	background: none;
+    top: -35px;
+    left: 1130px;
+    width: 415px;
+    height: 480px;
+    background-image: url(../img/SB_Deer.png);
+    position: absolute;
+    animation: shake 2s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+ 0%, 5% {
+    transform: translate3d(-2px, 2px, 0);
+      opacity: 0;
+  
+  }
+
+  40% {
+    transform: translate3d(2px, -2px, 0);
+      
+      opacity: 1;
+  }
+
+}
+
+.title {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    width: 350px;
+    height: 170px;
+    background: url(../img/Springwater-Title.png) no-repeat center;
+    background-size: contain;
+    background-size: contain;
+    background-size: contain;
+    background-size: contain;
+    
+}
+
+.title:hover {
+    position: absolute;
+    top: -25px;
+    left: 10px;
+    width: 350px;
+    height: 330px;
+    background: url(../img/Springwater-Title2.png) no-repeat center;
+    background-size: contain;
+    background-size: contain;
+    background-size: contain;
+    background-size: contain;
+    
+}
+
+.info {
+    position: absolute;
+    top: -30px;
+    left: 2150px;
+    width: 250px;
+    height: 170px;
+    background: url(../img/Info.png) no-repeat center;
+    background-size: contain;
+    background-size: contain;
+    background-size: contain;
+    background-size: contain;
+    position: absolute;
+}
+
+.info:hover {
+    border: none;
+	background: none;
+    top: -30px;
+    left: 2150px;
+    width: 250px;
+    height: 170px;
+    background: url(../img/Info2.png) no-repeat center;
+    background-size: contain;
+    background-size: contain;
+    background-size: contain;
+    background-size: contain;
+    position: absolute;
+    
+}
+/* Common Classes */
+
+.clearfix:before, .clearfix:after {
+    content: " "; 
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+
+.clear {
+	clear: both;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
